@@ -11,3 +11,14 @@ while (i < prodotti.length) {
     i++;
     console.log[spesa]
 }
+
+document.getElementById("addBtn").addEventListener("click", function() {
+    const nuovoElemento = document.getElementById("newElement").value;
+
+    prodotti.push(nuovoElemento);
+    spesa.innerHTML += `<li>${nuovoElemento}</li>`;
+
+    //resetto (svuoto) il testo dell'input
+    document.getElementById("newElement").value = "";
+
+});
